@@ -1,0 +1,21 @@
+@mixin title-section {
+    font-size: 36px;
+    font-family: "Aleo", sans-serif;
+    color: $color-white;
+    font-weight: 400;
+}
+
+@mixin button-section {
+    display: block;
+        max-width: 225px;
+        min-height: 60px;
+        background-image: $button-bg;
+	    font-family: "Aleo", sans-serif;
+        font-size: 16px;
+	    font-weight: 400;
+        color: $color-white;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}

@@ -1,0 +1,53 @@
+
+.reviews{
+    background-image: url(images/reviws-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    &__inner{
+        grid-column: 1 / 3;
+        padding-top: 120px;
+        padding-bottom: 200px;  
+    }
+
+    &__title{
+        @include title-section;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+
+    &__item{
+        display: flex;
+        height: 284px;
+    
+        &-text{
+            background-color: $color-bg-text; 
+            padding: 50px 20px 50px 60px;
+        }
+        
+        &-name{
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: $size-big;
+            color: #fefefe;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+        }
+
+        &-txt{
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: $size-medium;
+            color: #e8e8e8;
+            font-weight: 400;          
+            line-height: 1.4;
+            text-indent: 30px;
+        }
+    }
+
+    .quote{
+        display: block;
+        color: $color-blue;
+        font-size: 17px;
+        width: 22px;
+    }
+}

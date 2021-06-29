@@ -1,0 +1,185 @@
+
+.header{
+    background-image: url(images/header-bg.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    &__inner{
+        padding-top: 265px;
+        text-align: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__content{
+
+
+        &-title{
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 48px;
+            color: $color-white;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        &-subtitle{
+            font-family: 'Josefin Sans', sans-serif;
+            font-size: 22px;
+            color: $color-white;
+            font-weight: 400;
+            margin-bottom: 55px;
+        }
+
+        &-form{
+            margin-bottom: 119px;
+            max-width: 652px;
+            width: 100%;
+            height: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+    
+            &-search{
+                max-width: 652px;
+                width: 100%;
+                min-height: 60px;
+                border: none;
+                padding-left: 125px;
+                padding-right: 165px;
+                outline: none;
+    
+                &::placeholder{
+                    font-family: 'Josefin Sans', sans-serif;
+                    font-weight: 400;
+                    letter-spacing: 3px;
+                    font-size: $size-small;
+                    color: $color-placeholder;
+                }
+            }
+
+            .search-symbol{
+                width: 20px;
+                height: 22px;
+                fill: #dfe5ff;
+            }
+        
+            &-button{
+                max-width: 146px;
+                width: 100%;
+                min-height: 56px;
+                position: absolute;
+                top: 2px;
+                right: 2px;
+                border: none;
+                background-color: $color-blue;
+                cursor: pointer;
+                font-family: "Aleo", sans-serif;
+                font-size: $size-small;
+                color: $color-white;
+                text-transform: uppercase;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-left: 35px;
+                padding-right: 15px;
+            }
+        }
+
+        &-scroll{
+            font-size: $size-small;
+            color: $color-white;
+            margin-bottom: 15px;
+
+            &-img{
+                margin-bottom: 135px;
+            }
+        }
+    }
+
+    &__logo-text{
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: $size-logo;
+        color: $color-white;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    &__menu{
+        background-color: $color-blue;
+
+        &-inner{
+            padding-top: 28px;
+            padding-bottom: 28px;
+            display: flex;
+            justify-content: space-between;
+            max-width: 1110px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            align-items: center;          
+        }
+
+        &-list{
+            display: flex;
+        }
+    
+        &-item{
+            margin-left: 42px;
+        }
+    
+        &-link{
+            font-size: $size-small;
+            font-family: "Aleo", sans-serif;
+            color: $color-white;
+            text-transform: uppercase;
+        }      
+    }  
+
+    .menu-button {
+        width: 40px;
+        height: 30px;
+        position: absolute;
+        top: 55px;
+        right: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        display: none;
+      }
+
+      .menu-button span {
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: $color-white
+      }
+      
+      .menu-button span::after,
+      .menu-button span::before {
+        content: "";
+        width: 100%;
+        height: 4px;
+        background-color: $color-white;
+        position: absolute;
+      }
+      
+      .menu-button span::before {
+        top: 0;
+        left: 0;
+      }
+      
+      .menu-button span::after {
+        bottom: 0;
+        left: 0;
+      }
+
+      .toggle{
+          display: none;
+      }
+}
+           

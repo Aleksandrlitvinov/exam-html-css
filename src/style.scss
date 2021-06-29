@@ -1,0 +1,462 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+
+@import "header";
+@import "main";
+@import "reviews";
+@import "footer";
+
+
+
+.container-content{
+    max-width: 1150px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-column-gap: 30px;
+}
+
+
+
+@media (max-width:"1199px"){
+
+    .header__menu{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .how-it-works-shape {
+        max-width: 775px;
+        position: absolute;
+        left: 75px;
+        top: 70px;
+        display: block;
+    }
+
+    .reviews__item{
+        height: auto;
+        align-items: center;
+    }
+
+    .reasons__inner{
+        align-items: center;
+    }
+}
+
+@media (max-width:"870px"){
+    .how-it-works-shape {
+        max-width: 600px;
+        position: absolute;
+        left: 105px;
+        top: 70px;
+        display: block;
+    }
+
+    .reasons__inner{
+        padding-top: 120px;
+        align-items: center;
+    }
+
+    .reasons__text{
+        padding-top: 0;
+    }
+
+    .reasons__images{
+        padding-top: 0;
+    }
+}
+
+
+@media (max-width:"768px"){
+
+    .container{
+        padding: 0 0;
+    }
+
+    .header__content-scroll,
+    .header__content-scroll-img{
+        display: none;
+    }
+
+    .header__menu-inner{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__logo{
+        margin-bottom: 30px;
+    }
+
+    .header__menu-item{
+        margin-left: 0;
+    }
+
+    .header__menu-list{
+        max-width: 700px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .how-it-works-shape {
+        max-width: 550px;
+        width: 100%;
+        position: absolute;
+        left: 75px;
+        top: 70px;
+        display: block;
+    }
+
+    .reviews__item{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reasons__inner{
+        grid-row-gap: 20px;
+    }
+    
+    .reasons__text{
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .reasons__title,
+    .reasons__description{
+        text-align: center;
+    }
+
+    .reasons__button{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+
+    .reasons__images{
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .reasons__images-img2{
+        position: static;
+        display: inline;
+        margin-top: 15px;
+    }
+
+    .booking__item1-content,
+    .booking__item2-content{
+        grid-column: 1 / 3;
+        text-align: center;
+    }
+
+    .booking__button{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .reviews__item-image{
+        margin-bottom: 15px;
+    }
+
+    .reviews__item-name{
+        text-align: center;
+    }
+
+    .footer__inner{
+        padding-top: 70px;
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width:"680px"){
+
+    .header__content-form{
+        max-width: 560px;
+        width: 100%;
+    }
+
+    .header__content-form-search{
+        max-width: 560px;
+        width: 100%;
+    }
+}
+
+@media (max-width:"576px"){
+
+    .header__content-title{
+        margin-top: 100px;
+    }
+
+    .header__content-form{
+        max-width: 576px;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background-color: $color-blue;
+        padding-top: 10px;
+        z-index: 5;
+    }
+
+    .header__content-form-search{
+        max-width: 450px;
+        width: 100%;
+        min-height: 40px;
+        margin-left: 70px;
+        text-align: left;
+        padding-left: 15px;
+    }
+
+    .header__content-form-button{
+        min-height: 36px;
+        right: 30px;
+        top: 12px;
+    }
+
+    .header .menu-button{
+        display: flex;
+        top: 15px;
+        left: 25px;
+        z-index: 5;
+    }
+
+    .header__menu {
+        transform: translateX(-200%);
+        width: 70%;
+        height: 100%;
+        background-color: $color-blue;
+        position: absolute;
+        left: 0;
+        text-align: center;
+        padding-bottom: 15px;
+        position: fixed;
+        top: 0;
+        z-index: 4;
+        padding-top: 100px;
+    }
+
+    .header__menu-list{
+        display: block;
+    }
+
+    .header__menu-item{
+        padding: 20px 0;
+    }
+
+    .header__menu-link{
+        font-size: 24px;
+    }
+
+    .header__logo{
+        display: none;
+    }
+
+    .toggle:checked ~ .header__menu {
+        transform: translateX(0%);      
+        transition: all .5s;
+      }
+      .menu-button span {
+        transition: all .15s;
+      }
+      .toggle:checked ~ .menu-button span {
+        transform: rotate(45deg);
+      }
+      .toggle:checked ~ .menu-button span::before {
+        top: 0;
+        transform: rotate(0);
+      }
+      .toggle:checked ~ .menu-button span::after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+
+    .reasons__images{
+       flex-direction: column;
+    }
+
+    .reasons__images-img2{
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .how-it-works__items{
+        flex-direction: column;
+    }
+
+    .how-it-works__item{
+        margin-bottom: 50px;
+    }
+
+    .how-it-works-shape{
+        display: none;
+    }
+}
+
+@media (max-width:"414px"){
+
+    .header__content-form-search{
+        max-width: 280px;
+        width: 100%;
+        min-height: 40px;
+        margin-left: 4rem;
+        padding-right: 45px;
+        text-align: left;
+    }
+
+    .header__content-form-search::placeholder{
+        letter-spacing: 0;
+    }
+
+    .header__content-form-button{
+        min-height: 36px;
+        right: 30px;
+        top: 12px;
+    }
+
+    .header__content-form-button{
+        background-color: transparent;
+        color: transparent ;
+    }
+
+    .search-symbol{
+        fill: $color-blue !important;
+    }
+
+    .reasons__inner,
+    .how-it-works__inner,
+    .reviews__inner,
+    .footer__inner{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .booking__item1-content,
+    .booking__item2-content{
+        padding: 25px 25px 15px 25px;
+    }
+
+    .reviews__item-photo{
+        max-width: 445px;
+        width: 100%;
+    }
+}
+
+@media (max-width:"375px"){
+
+    .header__content-form-search{
+        max-width: 250px;
+        width: 100%;
+        min-height: 40px;
+        margin-left: 4rem;
+        padding-right: 45px;
+    }
+
+    .header__content-form-button{
+        min-height: 36px;
+        right: 30px;
+        top: 12px;
+    }
+
+    .header__content-form-button{
+        background-color: transparent;
+        color: transparent ;
+    }
+
+    .search-symbol{
+        fill: $color-blue !important;
+    }
+
+    .reasons__inner,
+    .how-it-works__inner,
+    .reviews__inner,
+    .footer__inner{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .booking__item1-content,
+    .booking__item2-content{
+        padding: 25px 25px 15px 25px;
+    }
+}
+
+@media (max-width:"320px"){
+
+    .header .menu-button{
+        display: flex;
+        top: 15px;
+        left: 15px;
+        z-index: 5;
+    }
+
+    .header__menu-link{
+        font-size: 20px;
+    }
+
+    .header__content-form-search{
+        max-width: 240px;
+        width: 100%;
+        min-height: 40px;
+        margin-left: 4rem;
+        padding-right: 45px;
+    }
+
+    .header__content-form-search::placeholder{
+        font-size: 12px;
+    }
+
+    .header__content-form-button{
+        min-height: 36px;
+        right: 30px;
+        top: 12px;
+    }
+
+    .header__content-form-button{
+        background-color: transparent;
+        color: transparent ;
+        right: 5px;
+    }
+
+    .search-symbol{
+        fill: $color-blue !important;
+    }
+
+    .reasons__inner,
+    .how-it-works__inner,
+    .reviews__inner,
+    .footer__inner{
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    .reviews__title,
+    .reasons__title{
+        font-size: 28px;
+    }
+
+    .reviews__item-text {    
+        padding: 50px 20px 50px 20px;
+        text-align: left;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
